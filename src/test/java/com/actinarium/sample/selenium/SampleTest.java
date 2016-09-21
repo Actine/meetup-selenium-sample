@@ -65,6 +65,7 @@ public class SampleTest {
         Assert.assertEquals(rows.get(1).getLabel(), "Deliver an awesome preso on Selenium");
 
         rows.get(0).clickDestroy();
+        // Deleting the 0th row again because the list has been updated at the moment, with only 1 item remaining
         rows.get(0).clickDestroy();
         // This will wait for 5 seconds (implicit wait) before it's sure there are 0 items
         Assert.assertEquals(rows.size(), 0);
